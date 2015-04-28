@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       },
       livereload: {
         options: {
-          open: false,
+          open: true,
           middleware: function (connect) {
             return [
               connect.static('.tmp'),
@@ -433,7 +433,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer:server',
-//      'connect:livereload',
+      'connect:livereload',
       'watch'
     ]);
   });
